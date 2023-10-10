@@ -14,6 +14,7 @@ header {
 
 main {
   background-color: white;
+
   /* 요소 가운데 정렬 */
   margin: auto;
   max-width: 0 1024px;
@@ -60,8 +61,6 @@ main {
   background-size: cover; /* 이미지를 화면에 맞춰 배경 크기로 조정*/
   background-position: center; /* 이미지를 가운데 정렬 */
   background-repeat: no-repeat;
-  /* 부모 요소의 5%, 부모 = main */
-  min-height: 100px;
 }
 
 @media (min-width: 1024px) {
@@ -71,7 +70,26 @@ main {
   }
 }
 
+@media (max-width: 1024px) {
+  .mickey {
+    min-height: 15vh; /* 더 큰 높이로 조절 */
+  }
+}
+
 video {
   width: 100%;
   max-width: 1024;
+}
+
+footer {
+  color: white;
+  text-align: center;
+  height: 200px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* 축을 세로로 변경하여, 수평으로 나열 및 정렬 */
+  flex-direction: column;
 }

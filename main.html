@@ -11,19 +11,68 @@
       <div class="top">Disney</div>
       <div class="menu">MICKEY MOUSE MENU</div>
     </header>
+
     <main>
       <div class="stream">STREAM MICKEY AND FRIENDS NOW ON DISNEY+</div>
+
       <div class="mickey">MICKEY MOUSE</div>
+      <!-- 
       <div>
-        <video
-          controls
-          autoplay
-          loop
-          muted
-          src="./media/Steamboat Wille.mp4"
-        ></video>
+        <video controls autoplay loop muted src="./media/video_1.mp4"></video>
       </div>
+      -->
+
+      <!-- 비디오 플레이어 -->
+      <div>
+        <video id="video-player" controls autoplay>
+          <source src="media/video_1.mp4" type="video/mp4" />
+          <!-- 동영상 파일의 경로를 지정합니다. -->
+        </video>
+      </div>
+
+      <!-- 동영상 리스트 -->
+      <div class="video-list">
+        <ul>
+          <div class="video">
+            <a href="#" data-title="Video 1" data-source="media/video_1.mp4"
+              >Video 1</a
+            >
+          </div>
+
+          <div>
+            <a href="#" data-title="Video 2" data-source="media/video_2.mp4"
+              >Video 2</a
+            >
+          </div>
+
+          <!-- 나머지 동영상 항목들도 동일한 방식으로 동영상 파일의 경로를 지정해야 합니다. -->
+        </ul>
+      </div>
+
+      <div>More Video</div>
+
+      <br />
+
+      <div>Gallery</div>
+
+      <br />
+
+      <div>Shop</div>
+
+      <br />
+
+      <div>Mickey & Frieds</div>
+
+      <br />
     </main>
-    <footer></footer>
+
+    <footer>
+      <div>Disney</div>
+      <div>About Disney</div>
+      <div>Terms of Use</div>
+      <div>Do Not Sell or Share My Personal Information</div>
+      <div>㏇Disney, All Rights Reserved, Disney Entertainment</div>
+    </footer>
+    <script src="script.js"></script>
   </body>
 </html>
