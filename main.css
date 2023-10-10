@@ -1,0 +1,60 @@
+body {
+  /* 여백 제거 */
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  /* 요소 가운데 정렬 */
+  margin: auto;
+  width: 1024px;
+}
+
+/* 화면 너비가 1024px 이하일 때 이미지 너비 조절 */
+@media (max-width: 1024px) {
+  main {
+    width: 100%;
+  }
+}
+
+/* 화면 너비가 1024px 이상일 때 이미지 너비 조절 */
+@media (min-width: 1024px) {
+  main {
+    width: 1024px;
+  }
+}
+
+.top {
+  height: 50px;
+  width: 100%;
+}
+
+.menu {
+  height: 70px;
+  background-color: red;
+}
+
+.stream {
+  height: 60px;
+  background-color: blue;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mickey {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-image: url("/images/r_mickeymousefranchise_mickeymouse_ddt-16970_f7867c2d.jpeg");
+  background-size: cover; /* 이미지를 화면에 맞춰 배경 크기로 조정 */
+  background-position: center; /* 이미지를 가운데 정렬 */
+  min-height: 80px; /* 최소 높이 설정 */
+}
+
+@media (min-width: 1024px) {
+  .mickey {
+    width: 1024px;
+    height: 300px;
+  }
+}
