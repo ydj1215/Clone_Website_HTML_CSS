@@ -1,5 +1,5 @@
 // 동영상 리스트에서 모든 링크 요소를 선택합니다.
-const videoList = document.querySelectorAll(".video-list ul div a");
+const videoList = document.querySelectorAll(".video-list div a");
 
 // 비디오 플레이어 엘리먼트를 선택합니다.
 const videoPlayer = document.getElementById("video-player");
@@ -19,4 +19,21 @@ videoList.forEach(function (videoItem) {
     videoPlayer.load(); // 비디오 로드
     videoPlayer.play(); // 비디오 재생
   });
+});
+
+const gallery = document.querySelector(".shop_gallery");
+const prevButton = document.querySelector(".prev-button");
+const nextButton = document.querySelector(".next-button");
+let scrollPosition = 0;
+
+prevButton.addEventListener("click", () => {
+  scrollPosition -= 50; // 슬라이딩 크기 조절
+  if (scrollPosition < 0) scrollPosition = 0;
+  gallery.style.transform = `translateX(-${scrollPosition}%)`;
+});
+
+nextButton.addEventListener("click", () => {
+  scrollPosition += 50; // 슬라이딩 크기 조절
+  if (scrollPosition > 170) scrollPosition = 170; // 이미지가 끝에 도달하면 조절
+  gallery.style.transform = `translateX(-${scrollPosition}%)`;
 });
