@@ -1,26 +1,98 @@
 @import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap");
 
-body {
-  /* 여백 제거 */
+* {
   margin: 0;
   padding: 0;
+}
+
+body {
+  width: 100vw;
+  /* 여백 제거 */
+  /* margin: 0;
+  padding: 0; */
+
   background-color: rgb(234, 42, 67);
   font-family: "Black Han Sans", cursive;
+  overflow-x: hidden;
+}
+
+h2 {
+  margin: 30px;
 }
 
 header {
   /* 화면 상단에 고정 */
+  width: 100vw;
   position: sticky;
   top: 0;
   background-color: white;
+  z-index: 10;
+}
+
+/* 화면의 너비가 761px보다 작을 때 */
+@media (max-width: 761px) {
+  .disney {
+    display: none;
+  }
+}
+
+.top {
+  display: grid;
+  height: 65px;
+  width: 100%;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.top1,
+.top2,
+.top3,
+.top4,
+.top5,
+.top6,
+.top7 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.top_image {
+  width: 40%;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.menu {
+  height: 70px;
+  background-color: darkred;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  color: white;
+}
+
+.menu_image {
+  width: 60%;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.menu1,
+.menu2,
+.menu3,
+.menu4,
+.menu5,
+.menu6 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 main {
   background-color: white;
 
   /* 요소 가운데 정렬 */
-  margin: auto;
-  max-width: 0 1024px;
+  margin: 0 auto;
   min-height: 100vh;
 }
 
@@ -34,18 +106,9 @@ main {
 /* 화면 너비가 1024px 이상일 때 이미지 너비 조절 */
 @media (min-width: 1024px) {
   main {
-    width: 1024px;
+    max-width: 1024px;
+    margin: 0 auto;
   }
-}
-
-.top {
-  height: 50px;
-  width: 100%;
-}
-
-.menu {
-  height: 70px;
-  background-color: darkred;
 }
 
 .stream {
@@ -102,44 +165,142 @@ video {
 
 /* ========== More Video ========== */
 .More_Video {
-  display: flex;
-  margin: 10px;
+  width: 100%;
+  margin: 30px;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(10, 1fr);
+}
+
+.more_video_prev_button,
+.more_video_next_button {
+  background-color: white;
+  border: 0px;
+  font-size: 35pt;
+  color: rgb(180, 180, 180);
+  font-weight: bold;
+}
+
+.more_video_prev_button:hover,
+.more_video_next_button:hover {
+  color: rgb(100, 100, 100);
+  font-weight: bolder;
 }
 
 .play_box {
-  background-color: rgba(224, 224, 224, 0.5);
-  width: 30%;
-  /* 높이를 항상 width랑 같은 값을 가지게 설정 */
-  padding-top: 20%;
+  height: 200px;
 
-  z-index: 1;
-
+  /* 재생 버튼 가운데 정렬 */
   display: flex;
   align-items: center;
   justify-content: center;
 
-  position: relative;
+  /* position: relative;
+  margin: 10px;*/
+  z-index: 1;
 }
 
 .material-symbols-outlined {
-  position: absolute;
-  top: 30%;
   color: rgba(120, 120, 120, 0.5);
+  z-index: 2;
 }
 
 .material-symbols-outlined:hover {
   color: white;
 }
 
+.play_box_1 {
+  background-image: url(/images/MoreVideo_1.JPG);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  overflow: hidden; /* 이미지가 컨테이너를 벗어나지 않도록 함 */
+  z-index: 1;
+}
+
+.play_box_2 {
+  background-image: url(/images/MoreVideo_2.JPG);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  overflow: hidden;
+}
+
+.play_box_3 {
+  background-image: url(/images/MoreVideo_3.JPG);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  overflow: hidden;
+}
+
+.play_box_4 {
+  background-image: url(/images/MoreVideo_4.JPG);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  overflow: hidden;
+}
+
+.play_box_5 {
+  background-image: url(/images/MoreVideo_5.JPG);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  overflow: hidden;
+}
+
+.play_box_6 {
+  background-image: url(/images/MoreVideo_6.JPG);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  overflow: hidden;
+}
+
 /* ========== Gallery ========== */
-.Big_Gallery_One {
-  background-color: aqua;
+.gallery_element:nth-child(1) {
+  background-image: url("/images/gallery_1.jpeg");
   width: 100%;
-  height: 100px;
+  padding-top: 50%;
+
+  /* 이미지의 크기를 div에 맞게 조절 */
+  background-size: cover;
+  background-position: center;
+}
+
+.gallery_element:nth-child(2) {
+  background-image: url("/images/gallery_2.jpeg");
+  width: 100%;
+  padding-top: 50%;
+  background-size: cover;
+  background-position: center;
+}
+
+.gallery_element:nth-child(3) {
+  background-image: url("/images/gallery_3.jpeg");
+  width: 100%;
+  padding-top: 50%;
+  background-size: cover;
+  background-position: center;
+}
+
+.gallery_element:nth-child(4) {
+  background-image: url("/images/gallery_4.jpeg");
+  width: 100%;
+  padding-top: 50%;
+  background-size: cover;
+  background-position: center;
 }
 
 /* ========== Shop ========== */
 .shop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.shop_slider {
   width: 100%;
   position: relative;
   overflow: hidden;
@@ -150,17 +311,20 @@ video {
 }
 
 .shop_gallery {
+  position: relative;
+  right: -25px;
+  width: 100%;
   display: flex;
   transition: transform 0.5s ease;
 }
 
 .shop_img {
-  width: 20%;
+  width: 25%;
 
   /* 비율 유지를 위해 */
   height: auto;
   border: 1px solid rgb(224, 224, 224);
-  margin: 10px;
+  margin: 32px;
 
   z-index: 1;
 }
@@ -191,7 +355,7 @@ video {
 }
 
 .next-button {
-  right: 10px;
+  right: 25px;
 }
 
 .prev-button:hover,
@@ -201,7 +365,7 @@ video {
 }
 
 /* ========== Mickey & Frieds ========== */
-.gallery {
+.mickey_friends {
   display: flex;
   flex-flow: row wrap;
   align-items: center;
@@ -222,6 +386,12 @@ video {
   text-align: center;
 }
 
+.character_box:hover {
+  cursor: pointer;
+  width: 150px;
+  box-shadow: 10px 5px 20px 1px black;
+}
+
 .character {
   border-radius: 10px;
   width: 120%;
@@ -240,6 +410,10 @@ video {
   bottom: 0;
   right: 0;
   left: 0;
+}
+
+.character_text:hover {
+  text-shadow: 2px 4px 3px black;
 }
 
 footer {

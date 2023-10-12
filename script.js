@@ -1,3 +1,4 @@
+// Main
 // 동영상 리스트에서 모든 링크 요소를 선택합니다.
 const videoList = document.querySelectorAll(".video-list div a");
 
@@ -21,19 +22,55 @@ videoList.forEach(function (videoItem) {
   });
 });
 
-const gallery = document.querySelector(".shop_gallery");
+// More Video
+// More Video 링크 연결
+const PlayButton_1 = document.querySelector(".play_box_1");
+PlayButton_1.addEventListener("click", function () {
+  window.open("https://www.youtube.com/watch?v=KTJQdbvCMag", "_blank");
+});
+
+const PlayButton_2 = document.querySelector(".play_box_2");
+PlayButton_2.addEventListener("click", function () {
+  window.open("https://www.youtube.com/watch?v=83sdwFOL1r8", "_blank");
+});
+
+const PlayButton_3 = document.querySelector(".play_box_3");
+PlayButton_3.addEventListener("click", function () {
+  window.open("https://www.youtube.com/watch?v=xWtLw83_jE0", "_blank");
+});
+
+const PlayButton_4 = document.querySelector(".play_box_4");
+PlayButton_4.addEventListener("click", function () {
+  window.open("https://www.youtube.com/watch?v=UPKWCCh4fPU", "_blank");
+});
+
+const PlayButton_5 = document.querySelector(".play_box_5");
+PlayButton_5.addEventListener("click", function () {
+  window.open("https://www.youtube.com/watch?v=kssoXnSwMSQ", "_blank");
+});
+
+const PlayButton_6 = document.querySelector(".play_box_6");
+PlayButton_6.addEventListener("click", function () {
+  window.open("https://www.youtube.com/watch?v=Fl2W6FZ-etQ&t=3s", "_blank");
+});
+
+// Gallery
+
+// Shop
+const shop = document.querySelector(".shop_gallery");
 const prevButton = document.querySelector(".prev-button");
 const nextButton = document.querySelector(".next-button");
 let scrollPosition = 0;
 
 prevButton.addEventListener("click", () => {
-  scrollPosition -= 50; // 슬라이딩 크기 조절
+  scrollPosition -= 62.8; // 슬라이딩 크기 조절
   if (scrollPosition < 0) scrollPosition = 0;
-  gallery.style.transform = `translateX(-${scrollPosition}%)`;
+  shop.style.transform = `translateX(-${scrollPosition}%)`;
 });
 
 nextButton.addEventListener("click", () => {
-  scrollPosition += 50; // 슬라이딩 크기 조절
-  if (scrollPosition > 170) scrollPosition = 170; // 이미지가 끝에 도달하면 조절
-  gallery.style.transform = `translateX(-${scrollPosition}%)`;
+  scrollPosition += 62.8; // 슬라이딩 크기 조절
+  // 이미지가 끝에 도달하면 다시 처음으로
+  if (scrollPosition > 350) scrollPosition = 0;
+  shop.style.transform = `translateX(-${scrollPosition}%)`;
 });
