@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@300&family=Black+Han+Sans&family=Nanum+Pen+Script&family=Roboto&display=swap");
 
 * {
   margin: 0;
@@ -12,14 +13,16 @@ body {
   padding: 0; */
 
   background-color: rgb(234, 42, 67);
-  font-family: "Black Han Sans", cursive;
+  font-family: "Archivo", cursive;
   /* overflow-x: hidden; */
+  font-weight: bold;
 }
 
 h2 {
   margin: 30px;
 }
 
+/* ========== header ========== */
 header {
   /* 화면 상단에 고정 */
   width: 100vw;
@@ -30,17 +33,18 @@ header {
 }
 
 /* 화면의 너비가 761px보다 작을 때 */
-@media (max-width: 761px) {
-  .disney {
+@media (max-width: 512px) {
+  header {
     display: none;
   }
 }
 
+/* top */
 .top {
   display: grid;
   height: 65px;
   width: 100%;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: 25% repeat(5, 10%) 25%;
 }
 
 .top1,
@@ -48,36 +52,221 @@ header {
 .top3,
 .top4,
 .top5,
-.top6,
-.top7 {
+.top6 {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+.top1 {
+  justify-content: flex-start;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
 .top_image {
-  width: 40%;
+  width: 22%;
   height: auto;
   max-width: 100%;
   max-height: 100%;
 }
 
+/* drop down */
+/* 2 */
+.top2 {
+  position: relative;
+}
+
+.disney_dropdown {
+  display: none;
+  position: absolute;
+  /* transform: translateY(100%); */
+  top: 60px;
+  z-index: 1;
+  width: 175px;
+}
+
+.disney_dropdown a {
+  display: block;
+}
+
+.top2:hover .disney_dropdown {
+  display: block;
+}
+
+/* 3 */
+.top3 {
+  position: relative;
+}
+
+.parks_dropdown {
+  display: none;
+  position: absolute;
+  /* transform: translateY(100%); */
+  top: 60px;
+  z-index: 1;
+  width: 310px;
+}
+
+.parks_dropdown a {
+  display: block;
+}
+
+.top3:hover .parks_dropdown {
+  display: block;
+}
+
+/* 4 */
+.top4 {
+  position: relative;
+}
+
+.movies_dropdown {
+  display: none;
+  position: absolute;
+  /* transform: translateY(100%); */
+  top: 60px;
+  width: 210px;
+  z-index: 1;
+}
+
+.movies_dropdown a {
+  display: block;
+}
+
+.top4:hover .movies_dropdown {
+  display: block;
+}
+
+/* 5 */
+.top5 {
+  position: relative;
+}
+
+.shop_dropdown {
+  display: none;
+  position: absolute;
+  /* transform: translateY(100%); */
+  top: 60px;
+  width: 120px;
+
+  z-index: 1;
+}
+
+.shop_dropdown a {
+  display: block;
+}
+
+.top5:hover .shop_dropdown {
+  display: block;
+}
+
+/* 6 */
+.top6 {
+  position: relative;
+}
+
+.more_dropdown {
+  display: none;
+  position: absolute;
+  /* transform: translateY(100%); */
+  top: 60px;
+  width: 300px;
+  z-index: 1;
+}
+
+.more_dropdown a {
+  display: block;
+}
+
+.top6:hover .more_dropdown {
+  display: block;
+}
+
+.top7 {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#search_icon {
+  font-size: 30pt;
+  color: cornflowerblue;
+  margin-right: 50px;
+}
+
+#search_icon:hover {
+  color: darkblue;
+}
+
+input {
+  width: 287px;
+  height: 40px;
+  padding-left: 10px;
+  border: 1px solid rgb(150, 150, 150);
+  border-radius: 5px;
+  margin-right: 10px;
+  background-color: rgba(230, 230, 230, 0.5);
+}
+
+.more_dropdown,
+.shop_dropdown,
+.disney_dropdown,
+.movies_dropdown,
+.parks_dropdown {
+  background-color: white;
+  padding: 10px 10px 20px 20px;
+  font-family: "Black Han Sans", cursive;
+  font-weight: 100;
+  border: 5px solid white;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.menu_a {
+  text-decoration: none;
+  color: rgb(35, 43, 45);
+  margin-top: 20px;
+}
+
+@media (max-width: 1024px) {
+  .top2,
+  .top3,
+  .top4,
+  .top5,
+  .top6,
+  .top7 {
+    display: none;
+  }
+
+  .top {
+    height: 30px;
+  }
+}
+
+/* menu */
 .menu {
   height: 70px;
   background-color: darkred;
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: 25% repeat(5, 10%) 25%;
+  grid-template-rows: repeat(1, 70px);
   color: white;
 }
 
 .menu_image {
-  width: 60%;
   height: auto;
-  max-width: 100%;
-  max-height: 100%;
+  max-width: 50%;
+  max-height: 50%;
 }
 
-.menu1,
+.menu1 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 20px;
+}
+
 .menu2,
 .menu3,
 .menu4,
@@ -86,8 +275,25 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
+@media (max-width: 1024px) {
+  .menu {
+    display: flex;
+    height: 35px;
+  }
+
+  .menu2,
+  .menu3,
+  .menu4,
+  .menu5,
+  .menu6 {
+    display: none;
+  }
+}
+
+/* ========== main ========== */
 main {
   background-color: white;
 
@@ -142,25 +348,118 @@ main {
   }
 }
 
+/* video */
+.video_box {
+  max-width: 1024px;
+  display: grid;
+  grid-template-columns: 65% 35%;
+  grid-auto-flow: column;
+  overflow: hidden;
+}
+
 video {
   width: 100%;
-  max-width: 1024;
+  height: 375px;
+  max-width: 1024px;
+}
+
+.video-list {
+  height: 375px;
+  overflow: scroll;
 }
 
 .vi {
+  width: 100%;
   max-width: 1024px;
-  height: 50px;
+  height: 80px;
   background-color: rgb(244, 244, 244);
 
   /* border은 겹치면 선이 두꺼워지기 때문에 이를 방지하기 위해 그림자 속성 사용 */
   box-shadow: 0px 0px 0px 1px rgb(224, 224, 224);
+
   display: flex;
   align-items: center;
-  padding-left: 20px;
+  justify-content: center;
+
+  overflow: hidden;
 }
 
 .vi:hover {
   background-color: white;
+}
+
+.video_a {
+  text-decoration: none;
+  color: rgb(35, 43, 45);
+}
+
+.thumb_1,
+.thumb_2,
+.thumb_3,
+.thumb_4,
+.thumb_5,
+.thumb_6 {
+  width: 120px;
+  height: 100px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: right center;
+  position: relative;
+  left: -95px;
+}
+
+.thumb_1 {
+  background-image: url("/images/thumb_1.JPG");
+}
+
+.thumb_2 {
+  background-image: url("/images/thumb_2.JPG");
+}
+
+.thumb_3 {
+  background-image: url("/images/thumb_3.JPG");
+}
+
+.thumb_4 {
+  background-image: url("/images/thumb_4.JPG");
+}
+
+.thumb_5 {
+  background-image: url("/images/thumb_5.JPG");
+}
+
+.thumb_6 {
+  background-image: url("/images/thumb_6.JPG");
+}
+
+@media (max-width: 1024px) {
+  video {
+    height: auto;
+  }
+
+  .video_box {
+    grid-template-columns: 1fr; /* 폭이 1024px 미만이면 한 개의 컬럼으로 변경 */
+    grid-template-rows: auto auto; /* 컬럼을 로우로 변경 */
+  }
+
+  .vi {
+    height: 60px;
+  }
+
+  .thumb_1,
+  .thumb_2,
+  .thumb_3,
+  .thumb_4,
+  .thumb_5,
+  .thumb_6 {
+    position: relative;
+    left: -430px;
+  }
+
+  .video-list {
+    height: 200px;
+    overflow: scroll;
+  }
 }
 
 /* ========== More Video ========== */
@@ -210,12 +509,13 @@ video {
   z-index: 1;
 }
 
-.material-symbols-outlined {
+#play_cirlce {
   color: rgba(120, 120, 120, 0.5);
   z-index: 2;
+  cursor: pointer;
 }
 
-.material-symbols-outlined:hover {
+#play_cirlce:hover {
   color: white;
 }
 
@@ -275,7 +575,7 @@ video {
   font-size: 35pt;
   color: rgb(180, 180, 180);
   font-weight: bold;
-
+  cursor: pointer;
   z-index: 5;
 }
 
@@ -399,6 +699,7 @@ video {
   color: rgb(220, 220, 220);
   font-weight: bold;
   border: none;
+  cursor: pointer;
 }
 
 .gallery_prev_button:hover,
@@ -470,7 +771,7 @@ video {
   font-size: 40px;
   font-weight: bold;
   color: rgb(180, 180, 180);
-
+  cursor: pointer;
   z-index: 2;
 }
 
@@ -484,8 +785,7 @@ video {
 
 .prev-button:hover,
 .next-button:hover {
-  text-shadow: 2px 2px 4px gray;
-  background-color: rgba(224, 224, 224, 0.5);
+  color: rgb(100, 100, 100);
 }
 
 /* ========== Mickey & Frieds ========== */
@@ -494,6 +794,9 @@ video {
   flex-flow: row wrap;
   align-items: center;
   justify-content: center;
+
+  font-family: "Black Han Sans", cursive;
+  font-weight: 100;
 }
 
 .character_box {

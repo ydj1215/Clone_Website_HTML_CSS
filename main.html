@@ -11,12 +11,62 @@
     <header>
       <div class="top">
         <div class="top1"><img class="top_image" src="/images/Disney.png" alt="Disney"></div>
-        <div class="top2"><span>DISNEY+</span></div>
-        <div class="top3"><span>PARKS & TRAVEL</span></div>
-        <div class="top4"><span>MOVIES</span></div>
-        <div class="top5"><span>SHOP</span></div>
-        <div class="top6"><span>MORE</span></div>
-        <div class="top7"><span>SEARCH</span></div>
+        
+        <div class="top2">
+          <span>DISNEY +</span>
+          <div class="disney_dropdown">
+            <a href="#">On Diseny Plus</a>
+            <a href="#">The Disney Bundle</a>
+          </div>
+        </div>
+
+        <div class="top3">
+          <span>PARKS / TRAVEL</span>
+          <div class="parks_dropdown">
+            <a href="#" class="menu_a">Walt Disney World Resort</a>
+            <a href="#" class="menu_a">DisneyLand Resort</a>
+            <a href="#" class="menu_a">Disney Cruise Line</a>
+            <a href="#" class="menu_a">Aulani - A Disney Resort and Spa</a>
+            <a href="#" class="menu_a">Adventures by Club</a>
+            <a href="#" class="menu_a"></a>
+          </div>
+        </div>
+
+        <div class="top4">
+          <span>MOVIES</span>
+          <div class="movies_dropdown">
+            <a href="#" class="menu_a">All Movies</a>
+            <a href="#" class="menu_a">Movies Anywhere</a>
+            <a href="#" class="menu_a">Disney Movie Insiders</a>
+            <a href="#" class="menu_a">20th Century Studios</a>
+          </div>
+        </div>
+
+        <div class="top5">
+          <span>SHOP</span>
+          <div class="shop_dropdown">
+            <a href="#" class="menu_a">Sale</a>
+            <a href="#" class="menu_a">Clothes</a>
+            <a href="#" class="menu_a">Accessories</a>
+            <a href="#" class="menu_a">Toys</a>
+            <a href="#" class="menu_a">Shop All</a>
+          </div>
+        </div>
+
+        <div class="top6">
+          <span>MORE</span>
+          <div class="more_dropdown">
+            <a href="#" class="menu_a">Disney News</a>
+            <a href="#" class="menu_a">D23: The Official Disney Fan Club</a>
+            <a href="#" class="menu_a">Live Shows</a>
+          </div>
+        </div>
+
+        <div class="top7">
+          <input type="text" placeholder="Search">
+          <span id="search_icon" class="material-symbols-outlined">search</span>
+        </div>
+
       </div>
       <div class="menu">
         <div class="menu1"><img class="menu_image" src="/images/MikceyMouseLogo.png" alt=""></div>
@@ -34,50 +84,56 @@
       <div class="mickey"></div>
 
       <!-- Main -->
+      <div class="video_box">
       <div>
         <video id="video-player" controls autoplay>
           <source src="media/video_1.mp4" type="video/mp4" />
         </video>
       </div>
-
       <div class="video-list">
           <div class="vi">
-            <a href="#" data-title="Video 1" data-source="media/video_1.mp4"
+            <div class="thumb_1"></div>
+            <a href="#" class="video_a" data-title="Video 1" data-source="media/video_1.mp4"
               >Video 1</a
             >
           </div>
 
           <div class="vi">
-            <a href="#" data-title="Video 2" data-source="media/video_2.mp4"
+            <div class="thumb_2"></div>
+            <a href="#" class="video_a" data-title="Video 2" data-source="media/video_2.mp4"
               >Video 2</a
             >
           </div>
 
           <div class="vi">
-            <a href="#" data-title="Video 3" data-source="media/video_3.mp4"
+            <div class="thumb_3"></div>
+            <a href="#" class="video_a" data-title="Video 3" data-source="media/video_3.mp4"
               >Video 3</a
             >
-          </div class="vi">
+          </div>
 
           <div class="vi">
-            <a href="#" data-title="Video 4" data-source="media/video_4.mp4"
+            <div class="thumb_4"></div>
+            <a href="#" class="video_a" data-title="Video 4" data-source="media/video_4.mp4"
               >Video 4</a
             >
           </div>
 
           <div class="vi">
-            <a href="#" data-title="Video 5" data-source="media/video_5.mp4"
+            <div class="thumb_5"></div>
+            <a href="#" class="video_a" data-title="Video 5" data-source="media/video_5.mp4"
               >Video 5</a
             >
           </div>
 
           <div class="vi">
-            <a href="#" data-title="Video 6" data-source="media/video_6.mp4"
+            <div class="thumb_6"></div>
+            <a href="#" class="video_a" data-title="Video 6" data-source="media/video_6.mp4"
               >Video 6</a
             >
           </div>
       </div>
-
+    </div>
       <!-- More Video -->
       <div>
         <h2>More Video</h2>
@@ -88,36 +144,36 @@
         <button class="more_video_prev_button">〈</button>
         <div class="more_video_list">
           <div class="play_box play_box_1">
-              <span class="material-symbols-outlined" style="font-size: 60pt;">
+              <span id="play_cirlce" class="material-symbols-outlined" style="font-size: 60pt;">
                 play_circle
               </span>
           </div>
           
           <div class="play_box play_box_2">
-            <span class="material-symbols-outlined" style="font-size: 60pt;">
+            <span id="play_cirlce" class="material-symbols-outlined" style="font-size: 60pt;">
               play_circle
             </span>
           </div>
         <div class="play_box play_box_3">
-          <span class="material-symbols-outlined" style="font-size: 60pt;">
+          <span id="play_cirlce" class="material-symbols-outlined" style="font-size: 60pt;">
             play_circle
           </span>
         </div>
 
       <div class="play_box play_box_4">
-        <span class="material-symbols-outlined" style="font-size: 60pt;">
+        <span id="play_cirlce" class="material-symbols-outlined" style="font-size: 60pt;">
           play_circle
         </span>
       </div>
 
       <div class="play_box play_box_5">
-        <span class="material-symbols-outlined" style="font-size: 60pt;">
+        <span id="play_cirlce" class="material-symbols-outlined" style="font-size: 60pt;">
           play_circle
         </span>
       </div>
 
       <div class="play_box play_box_6">
-        <span class="material-symbols-outlined" style="font-size: 60pt;">
+        <span id="play_cirlce" class="material-symbols-outlined" style="font-size: 60pt;">
           play_circle
         </span>
       </div>
@@ -156,7 +212,10 @@
       <br />
 
       <!-- Shop -->
-      <h2>Shop</h2>
+      <h2>
+        <span>Shop</span>
+        <span style="color: cornflowerblue; font-size: 14pt; cursor: pointer;">&nbsp;&nbsp;See All</span>
+      </h2>
       <div class="shop">
         <div class="shop_slider">
           <button class="prev-button"> 〈 </button>
@@ -183,7 +242,7 @@
 
       <!-- Mickey & Friends -->
       <div>
-        <h2>Mickey & Frieds</h2>
+        <h2>Mickey / Frieds</h2>
         <div class="mickey_friends">
         <div class="character_box">
           <img class="character" src="./images/MickeyMouse.jpeg" alt="Mickey Mouse">
