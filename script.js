@@ -54,7 +54,70 @@ PlayButton_6.addEventListener("click", function () {
   window.open("https://www.youtube.com/watch?v=Fl2W6FZ-etQ&t=3s", "_blank");
 });
 
+// More Video 슬라이드 구현
+const more_video_list = document.querySelector(".more_video_list");
+const more_video_prev_button = document.querySelector(
+  ".more_video_prev_button"
+);
+const more_video_next_button = document.querySelector(
+  ".more_video_next_button"
+);
+let more_video_list_scroll_position = 0;
+
+more_video_prev_button.addEventListener("click", () => {
+  more_video_list_scroll_position -= 30; // 슬라이딩 크기 조절
+  if (more_video_list_scroll_position < 0) {
+    more_video_list_scroll_position = 150; // 이미지가 처음 이전으로 도달하면 다시 끝으로
+  }
+  more_video_list.style.transform = `translateX(-${more_video_list_scroll_position}%)`;
+});
+
+more_video_next_button.addEventListener("click", () => {
+  more_video_list_scroll_position += 30; // 슬라이딩 크기 조절
+  if (more_video_list_scroll_position > 150) {
+    more_video_list_scroll_position = 0; // 이미지가 끝에 도달하면 다시 처음으로
+  }
+  more_video_list.style.transform = `translateX(-${more_video_list_scroll_position}%)`;
+});
+
 // Gallery
+const gallery_list = document.querySelector(".gallery_list");
+const gallery_prev_button = document.querySelector(".gallery_prev_button");
+const gallery_next_button = document.querySelector(".gallery_next_button");
+
+// Gallery 그리드 박스의 개수
+const galleryItems = document.querySelectorAll(".gallery_element");
+const numberOfItems = galleryItems.length;
+
+// Gallery 한 페이지 너비 ( + gap)
+const galleryElementWidth = (gallery_list.offsetWidth + 10) / numberOfItems;
+
+let gallery_scrollPosition = 0;
+
+gallery_prev_button.addEventListener("click", () => {
+  gallery_scrollPosition -= galleryElementWidth;
+  if (gallery_scrollPosition < 0) {
+    gallery_scrollPosition =
+      gallery_list.offsetWidth * ((numberOfItems - 1) / numberOfItems);
+  }
+  gallery_list.style.transform = `translateX(-${gallery_scrollPosition}px)`;
+});
+
+gallery_next_button.addEventListener("click", () => {
+  gallery_scrollPosition += galleryElementWidth;
+  if (
+    gallery_scrollPosition >
+    gallery_list.offsetWidth * ((numberOfItems - 1) / numberOfItems)
+  ) {
+    gallery_scrollPosition = 0;
+  }
+  gallery_list.style.transform = `translateX(-${gallery_scrollPosition}px)`;
+});
+
+// 창 크기 변경 시, gallery_list의 너비를 다시 계산
+window.addEventListener("resize", () => {
+  galleryElementWidth = gallery_list.offsetWidth / numberOfItems;
+});
 
 // Shop
 const shop = document.querySelector(".shop_gallery");
@@ -63,14 +126,13 @@ const nextButton = document.querySelector(".next-button");
 let scrollPosition = 0;
 
 prevButton.addEventListener("click", () => {
-  scrollPosition -= 62.8; // 슬라이딩 크기 조절
+  scrollPosition -= 62.8;
   if (scrollPosition < 0) scrollPosition = 0;
   shop.style.transform = `translateX(-${scrollPosition}%)`;
 });
 
 nextButton.addEventListener("click", () => {
-  scrollPosition += 62.8; // 슬라이딩 크기 조절
-  // 이미지가 끝에 도달하면 다시 처음으로
+  scrollPosition += 62.8;
   if (scrollPosition > 350) scrollPosition = 0;
   shop.style.transform = `translateX(-${scrollPosition}%)`;
 });
