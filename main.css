@@ -2,19 +2,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Archivo:wght@300&family=Black+Han+Sans&family=Nanum+Pen+Script&family=Roboto&display=swap");
 
 * {
+  /* 여백 제거 */
   margin: 0;
   padding: 0;
 }
 
 body {
   width: 100vw;
-  /* 여백 제거 */
-  /* margin: 0;
-  padding: 0; */
-
   background-color: rgb(234, 42, 67);
   font-family: "Archivo", cursive;
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
   font-weight: bold;
 }
 
@@ -32,15 +29,10 @@ header {
   z-index: 10;
 }
 
-/* 화면의 너비가 761px보다 작을 때 */
-@media (max-width: 512px) {
-  header {
-    display: none;
-  }
-}
-
 /* top */
 .top {
+  z-index: 100;
+  background-color: white;
   display: grid;
   height: 65px;
   width: 100%;
@@ -64,11 +56,97 @@ header {
   cursor: pointer;
 }
 
+.top_nav {
+  display: none;
+}
+
+@media (max-width: 1480px) {
+  .top {
+    grid-template-columns: 10% 70% 20%;
+  }
+
+  .top2,
+  .top3,
+  .top4,
+  .top5,
+  .top6 {
+    display: none;
+  }
+
+  .top_nav {
+    background-image: url("images/icon.JPG");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    display: flex;
+    align-items: flex-end;
+    justify-self: flex-start;
+    width: 100px;
+    height: 55px;
+    margin-top: 3px;
+    cursor: pointer;
+
+    position: relative;
+  }
+
+  .top_nav_dropdown {
+    /* 초기에는 드롭다운 메뉴를 숨긴다. */
+    display: none;
+    position: absolute;
+    top: 60px;
+    z-index: 10;
+    width: 175px;
+
+    /* 꾸미기 */
+    background-color: darkred;
+    padding: 10px 10px 20px 20px;
+    font-family: "Black Han Sans", cursive;
+    font-weight: 100;
+    border: 5px solid darkred;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  }
+
+  .top_nav_dropdown a {
+    color: white;
+    text-shadow: 3px 3px 3px black;
+  }
+
+  /* 마우스를 가져다대면 드롭다운 메뉴 표시 */
+  .top_nav:hover .top_nav_dropdown {
+    display: block;
+  }
+
+  .top_nav_dropdown a {
+    display: block;
+  }
+
+  .top_nav:hover {
+    transform: scale(1.1);
+  }
+
+  .top7 {
+    display: flex;
+    right: 0;
+  }
+
+  input {
+    display: none;
+  }
+}
+
 .top_image {
-  width: 22%;
+  /* width: 22%;
   height: auto;
   max-width: 100%;
-  max-height: 100%;
+  max-height: 100%; */
+  width: 85px;
+  height: 35px;
+}
+
+.top_text {
+  font-size: 14pt;
 }
 
 /* drop down */
@@ -193,6 +271,7 @@ header {
   font-size: 30pt;
   color: cornflowerblue;
   margin-right: 50px;
+  cursor: pointer;
 }
 
 #search_icon:hover {
@@ -227,21 +306,6 @@ input {
   text-decoration: none;
   color: rgb(35, 43, 45);
   margin-top: 20px;
-}
-
-@media (max-width: 1024px) {
-  .top2,
-  .top3,
-  .top4,
-  .top5,
-  .top6,
-  .top7 {
-    display: none;
-  }
-
-  .top {
-    height: 30px;
-  }
 }
 
 /* menu */
@@ -379,8 +443,6 @@ video {
 
   display: flex;
   align-items: center;
-  justify-content: center;
-
   overflow: hidden;
 }
 
@@ -391,6 +453,8 @@ video {
 .video_a {
   text-decoration: none;
   color: rgb(35, 43, 45);
+  display: flex;
+  align-items: center;
 }
 
 .thumb_1,
@@ -400,12 +464,12 @@ video {
 .thumb_5,
 .thumb_6 {
   width: 120px;
-  height: 100px;
+  height: 78px;
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: right center;
-  position: relative;
-  left: -95px;
+  float: left;
+  margin-right: 20px;
 }
 
 .thumb_1 {
@@ -443,7 +507,7 @@ video {
   }
 
   .vi {
-    height: 60px;
+    height: 70px;
   }
 
   .thumb_1,
@@ -453,11 +517,11 @@ video {
   .thumb_5,
   .thumb_6 {
     position: relative;
-    left: -430px;
+    height: 68px;
   }
 
   .video-list {
-    height: 200px;
+    height: 300px;
     overflow: scroll;
   }
 }
@@ -509,6 +573,10 @@ video {
   z-index: 1;
 }
 
+.play_box:hover {
+  transform: scale(1.01);
+}
+
 #play_cirlce {
   color: rgba(120, 120, 120, 0.5);
   z-index: 2;
@@ -517,6 +585,7 @@ video {
 
 #play_cirlce:hover {
   color: white;
+  transform: scale(1.1);
 }
 
 .play_box_1 {
@@ -806,8 +875,6 @@ video {
   border-radius: 10px;
 
   position: relative;
-  /* flex-direction: column; 내부 요소를 세로로 배치. */
-
   display: flex;
   justify-content: center;
   text-align: center;
@@ -815,8 +882,8 @@ video {
 
 .character_box:hover {
   cursor: pointer;
-  width: 150px;
   box-shadow: 10px 5px 20px 1px black;
+  transform: scale(1.1);
 }
 
 .character {
@@ -827,16 +894,18 @@ video {
 
 .character_text {
   color: white;
-  text-shadow: 2px 2px 0px black;
-
+  text-shadow: 2px 2px 5px black;
+  font-size: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
-
   position: absolute;
   bottom: 0;
   right: 0;
   left: 0;
+
+  /* 텍스트 무조건 한줄로 보이게 */
+  white-space: nowrap;
 }
 
 .character_text:hover {

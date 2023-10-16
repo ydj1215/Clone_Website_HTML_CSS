@@ -1,0 +1,380 @@
+@import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@300&family=Black+Han+Sans&family=Nanum+Pen+Script&family=Roboto&display=swap");
+
+* {
+  /* 여백 제거 */
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  background-color: rgb(234, 42, 67);
+  font-family: "Archivo", cursive;
+  overflow-x: hidden;
+  font-weight: bold;
+}
+
+h2 {
+  margin: 30px;
+}
+
+/* ========== header ========== */
+header {
+  /* 화면 상단에 고정 */
+  width: 100vw;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 10;
+}
+
+/* top */
+.top {
+  z-index: 100;
+  background-color: white;
+  display: grid;
+  height: 65px;
+  width: 100%;
+  grid-template-columns: 25% repeat(5, 10%) 25%;
+}
+
+.top1,
+.top2,
+.top3,
+.top4,
+.top5,
+.top6 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.top1 {
+  justify-content: flex-start;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.top_nav {
+  display: none;
+}
+
+@media (max-width: 1480px) {
+  .top {
+    grid-template-columns: 10% 70% 20%;
+  }
+
+  .top2,
+  .top3,
+  .top4,
+  .top5,
+  .top6 {
+    display: none;
+  }
+
+  .top_nav {
+    background-image: url("images/icon.JPG");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    display: flex;
+    align-items: flex-end;
+    justify-self: flex-start;
+    width: 100px;
+    height: 55px;
+    margin-top: 3px;
+    cursor: pointer;
+
+    position: relative;
+  }
+
+  .top_nav_dropdown {
+    /* 초기에는 드롭다운 메뉴를 숨긴다. */
+    display: none;
+    position: absolute;
+    top: 60px;
+    z-index: 10;
+    width: 175px;
+
+    /* 꾸미기 */
+    background-color: darkred;
+    padding: 10px 10px 20px 20px;
+    font-family: "Black Han Sans", cursive;
+    font-weight: 100;
+    border: 5px solid darkred;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  }
+
+  .top_nav_dropdown a {
+    color: white;
+    text-shadow: 3px 3px 3px black;
+  }
+
+  /* 마우스를 가져다대면 드롭다운 메뉴 표시 */
+  .top_nav:hover .top_nav_dropdown {
+    display: block;
+  }
+
+  .top_nav_dropdown a {
+    display: block;
+  }
+
+  .top_nav:hover {
+    transform: scale(1.1);
+  }
+
+  .top7 {
+    display: flex;
+    right: 0;
+  }
+
+  input {
+    display: none;
+  }
+}
+
+.top_image {
+  /* width: 22%;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%; */
+  width: 85px;
+  height: 35px;
+}
+
+.top_text {
+  font-size: 14pt;
+}
+
+/* drop down */
+/* 2 */
+.top2 {
+  position: relative;
+}
+
+.disney_dropdown {
+  display: none;
+  position: absolute;
+  /* transform: translateY(100%); */
+  top: 60px;
+  z-index: 1;
+  width: 175px;
+}
+
+.disney_dropdown a {
+  display: block;
+}
+
+.top2:hover .disney_dropdown {
+  display: block;
+}
+
+/* 3 */
+.top3 {
+  position: relative;
+}
+
+.parks_dropdown {
+  display: none;
+  position: absolute;
+  /* transform: translateY(100%); */
+  top: 60px;
+  z-index: 1;
+  width: 310px;
+}
+
+.parks_dropdown a {
+  display: block;
+}
+
+.top3:hover .parks_dropdown {
+  display: block;
+}
+
+/* 4 */
+.top4 {
+  position: relative;
+}
+
+.movies_dropdown {
+  display: none;
+  position: absolute;
+  /* transform: translateY(100%); */
+  top: 60px;
+  width: 210px;
+  z-index: 1;
+}
+
+.movies_dropdown a {
+  display: block;
+}
+
+.top4:hover .movies_dropdown {
+  display: block;
+}
+
+/* 5 */
+.top5 {
+  position: relative;
+}
+
+.shop_dropdown {
+  display: none;
+  position: absolute;
+  /* transform: translateY(100%); */
+  top: 60px;
+  width: 120px;
+
+  z-index: 1;
+}
+
+.shop_dropdown a {
+  display: block;
+}
+
+.top5:hover .shop_dropdown {
+  display: block;
+}
+
+/* 6 */
+.top6 {
+  position: relative;
+}
+
+.more_dropdown {
+  display: none;
+  position: absolute;
+  /* transform: translateY(100%); */
+  top: 60px;
+  width: 300px;
+  z-index: 1;
+}
+
+.more_dropdown a {
+  display: block;
+}
+
+.top6:hover .more_dropdown {
+  display: block;
+}
+
+.top7 {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#search_icon {
+  font-size: 30pt;
+  color: cornflowerblue;
+  margin-right: 50px;
+  cursor: pointer;
+}
+
+#search_icon:hover {
+  color: darkblue;
+}
+
+input {
+  width: 287px;
+  height: 40px;
+  padding-left: 10px;
+  border: 1px solid rgb(150, 150, 150);
+  border-radius: 5px;
+  margin-right: 10px;
+  background-color: rgba(230, 230, 230, 0.5);
+}
+
+.more_dropdown,
+.shop_dropdown,
+.disney_dropdown,
+.movies_dropdown,
+.parks_dropdown {
+  background-color: white;
+  padding: 10px 10px 20px 20px;
+  font-family: "Black Han Sans", cursive;
+  font-weight: 100;
+  border: 5px solid white;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.menu_a {
+  text-decoration: none;
+  color: rgb(35, 43, 45);
+  margin-top: 20px;
+}
+
+/* menu */
+.menu {
+  height: 70px;
+  background-color: darkred;
+  display: grid;
+  grid-template-columns: 25% repeat(5, 10%) 25%;
+  grid-template-rows: repeat(1, 70px);
+  color: white;
+}
+
+.menu_image {
+  height: auto;
+  max-width: 50%;
+  max-height: 50%;
+}
+
+.menu1 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.menu2,
+.menu3,
+.menu4,
+.menu5,
+.menu6 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+  .menu {
+    display: flex;
+    height: 35px;
+  }
+
+  .menu2,
+  .menu3,
+  .menu4,
+  .menu5,
+  .menu6 {
+    display: none;
+  }
+}
+
+/* ========== main ==========  */
+/* ========== login ==========  */
+
+/* ========== footer ========== */
+
+footer {
+  background-color: darkred;
+
+  color: white;
+  text-align: center;
+  height: 200px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* 축을 세로로 변경하여, 수평으로 나열 및 정렬 */
+  flex-direction: column;
+
+  z-index: 5;
+}
