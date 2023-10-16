@@ -60,6 +60,10 @@ header {
   display: none;
 }
 
+.temp {
+  display: none;
+}
+
 @media (max-width: 1480px) {
   .top {
     grid-template-columns: 10% 70% 20%;
@@ -132,6 +136,26 @@ header {
   }
 
   input {
+    display: none;
+  }
+}
+
+@media (max-width: 850px) {
+  .top {
+    grid-template-columns: 20% 60% 20%;
+  }
+
+  .top > :nth-child(3) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .temp {
+    cursor: pointer;
+  }
+
+  .top1 {
     display: none;
   }
 }
@@ -358,7 +382,59 @@ input {
 }
 
 /* ========== main ==========  */
-/* ========== login ==========  */
+main {
+  background-color: white;
+
+  /* 요소 가운데 정렬 */
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+/* 화면 너비가 1024px 이하일 때 이미지 너비 조절 */
+@media (max-width: 1024px) {
+  main {
+    width: 100%;
+  }
+}
+
+/* 화면 너비가 1024px 이상일 때 이미지 너비 조절 */
+@media (min-width: 1024px) {
+  main {
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+}
+
+.stream {
+  height: 60px;
+  background-color: darkblue;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mickey {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-image: url("/images/SkyMickey.jpeg");
+  background-size: cover; /* 이미지를 화면에 맞춰 배경 크기로 조정*/
+  background-position: center; /* 이미지를 가운데 정렬 */
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 1024px) {
+  .mickey {
+    width: 1024px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .mickey {
+    min-height: 15vh; /* 더 큰 높이로 조절 */
+  }
+}
 
 /* ========== footer ========== */
 

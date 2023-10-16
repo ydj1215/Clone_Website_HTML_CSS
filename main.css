@@ -60,6 +60,10 @@ header {
   display: none;
 }
 
+.temp {
+  display: none;
+}
+
 @media (max-width: 1480px) {
   .top {
     grid-template-columns: 10% 70% 20%;
@@ -132,6 +136,26 @@ header {
   }
 
   input {
+    display: none;
+  }
+}
+
+@media (max-width: 850px) {
+  .top {
+    grid-template-columns: 20% 60% 20%;
+  }
+
+  .top > :nth-child(3) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .temp {
+    cursor: pointer;
+  }
+
+  .top1 {
     display: none;
   }
 }
