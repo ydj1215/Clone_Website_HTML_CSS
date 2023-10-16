@@ -135,7 +135,7 @@ header {
     right: 0;
   }
 
-  input {
+  .top7 input {
     display: none;
   }
 }
@@ -383,11 +383,11 @@ input {
 
 /* ========== main ==========  */
 main {
-  background-color: white;
+  background-color: rgb(252, 254, 252);
 
   /* 요소 가운데 정렬 */
   margin: 0 auto;
-  min-height: 100vh;
+  min-height: 110vh;
 }
 
 /* 화면 너비가 1024px 이하일 때 이미지 너비 조절 */
@@ -406,21 +406,25 @@ main {
 }
 
 .stream {
-  height: 60px;
+  height: 100px;
   background-color: darkblue;
   color: white;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
+  font-size: 60pt;
+  font-family: "Black Han Sans", cursive;
+  padding-top: 10px;
 }
 
 .mickey {
   margin-top: 20px;
   margin-bottom: 20px;
-  background-image: url("/images/SkyMickey.jpeg");
+  background-image: url("images/Login.JPG");
   background-size: cover; /* 이미지를 화면에 맞춰 배경 크기로 조정*/
   background-position: center; /* 이미지를 가운데 정렬 */
   background-repeat: no-repeat;
+  margin-bottom: 75px;
 }
 
 @media (min-width: 1024px) {
@@ -436,8 +440,64 @@ main {
   }
 }
 
-/* ========== footer ========== */
+/* ========== main ========== */
+.login_box {
+  display: grid;
+  width: 100%;
+  max-width: 1024px;
+  grid-template-columns: 100%;
+  gap: 30px;
+  justify-items: center;
+  position: absolute;
+}
 
+.login input {
+  border: none;
+  box-shadow: 5px 5px 0px 1px grey;
+  color: black;
+  width: 50vw;
+  height: 100%;
+  font-size: 5vw;
+  min-height: 70px;
+  font-family: "Black Han Sans", cursive;
+}
+
+.login_button {
+  width: 100%;
+  height: 150px;
+  font-size: 30pt;
+  color: darkred;
+  font-family: "Black Han Sans", cursive;
+  border: 5px solid gray;
+  border-radius: 10%;
+  box-shadow: 10px 10px 0px 1px grey;
+  margin-right: 20px;
+}
+
+.login_button:hover {
+  transform: scale(1.1);
+}
+
+.login_join {
+  width: 50vw;
+  display: flex;
+}
+
+@media (max-width: 1035px) {
+  .login_join {
+    flex-wrap: wrap;
+  }
+
+  .login_button {
+    /* 2개의 버튼이 10px 간격으로 정렬될 수 있도록 조정 */
+    width: calc(50% - 20px);
+
+    margin-right: 20px; /* 버튼 사이 간격 */
+    margin-bottom: 20px; /* 2줄로 나열되도록 조정 */
+  }
+}
+
+/* ========== footer ========== */
 footer {
   background-color: darkred;
 

@@ -417,7 +417,7 @@ main {
 .mickey {
   margin-top: 20px;
   margin-bottom: 20px;
-  background-image: url("/images/SkyMickey.jpeg");
+  background-image: url("images/SkyMickey.jpeg");
   background-size: cover; /* 이미지를 화면에 맞춰 배경 크기로 조정*/
   background-position: center; /* 이미지를 가운데 정렬 */
   background-repeat: no-repeat;
@@ -497,27 +497,27 @@ video {
 }
 
 .thumb_1 {
-  background-image: url("/images/thumb_1.JPG");
+  background-image: url("images/thumb_1.JPG");
 }
 
 .thumb_2 {
-  background-image: url("/images/thumb_2.JPG");
+  background-image: url("images/thumb_2.JPG");
 }
 
 .thumb_3 {
-  background-image: url("/images/thumb_3.JPG");
+  background-image: url("images/thumb_3.JPG");
 }
 
 .thumb_4 {
-  background-image: url("/images/thumb_4.JPG");
+  background-image: url("images/thumb_4.JPG");
 }
 
 .thumb_5 {
-  background-image: url("/images/thumb_5.JPG");
+  background-image: url("images/thumb_5.JPG");
 }
 
 .thumb_6 {
-  background-image: url("/images/thumb_6.JPG");
+  background-image: url("images/thumb_6.JPG");
 }
 
 @media (max-width: 1024px) {
@@ -613,7 +613,7 @@ video {
 }
 
 .play_box_1 {
-  background-image: url(/images/MoreVideo_1.JPG);
+  background-image: url(images/MoreVideo_1.JPG);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -622,7 +622,7 @@ video {
 }
 
 .play_box_2 {
-  background-image: url(/images/MoreVideo_2.JPG);
+  background-image: url(images/MoreVideo_2.JPG);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -630,7 +630,7 @@ video {
 }
 
 .play_box_3 {
-  background-image: url(/images/MoreVideo_3.JPG);
+  background-image: url(images/MoreVideo_3.JPG);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -638,7 +638,7 @@ video {
 }
 
 .play_box_4 {
-  background-image: url(/images/MoreVideo_4.JPG);
+  background-image: url(images/MoreVideo_4.JPG);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -646,7 +646,7 @@ video {
 }
 
 .play_box_5 {
-  background-image: url(/images/MoreVideo_5.JPG);
+  background-image: url(images/MoreVideo_5.JPG);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -654,7 +654,7 @@ video {
 }
 
 .play_box_6 {
-  background-image: url(/images/MoreVideo_6.JPG);
+  background-image: url(images/MoreVideo_6.JPG);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -737,51 +737,51 @@ video {
 }
 
 .gallery_element:nth-child(1) {
-  background-image: url("/images/gallery_1.jpeg");
+  background-image: url("images/gallery_1.jpeg");
 }
 
 .gallery_element:nth-child(2) {
-  background-image: url("/images/gallery_2.jpeg");
+  background-image: url("images/gallery_2.jpeg");
 }
 
 .gallery_element:nth-child(3) {
-  background-image: url("/images/gallery_3.jpeg");
+  background-image: url("images/gallery_3.jpeg");
 }
 
 .gallery_element:nth-child(4) {
-  background-image: url("/images/gallery_4.jpeg");
+  background-image: url("images/gallery_4.jpeg");
 }
 
 .gallery_element:nth-child(5) {
-  background-image: url("/images/gallery_5.jpeg");
+  background-image: url("images/gallery_5.jpeg");
 }
 
 .gallery_element:nth-child(6) {
-  background-image: url("/images/gallery_6.jpeg");
+  background-image: url("images/gallery_6.jpeg");
 }
 
 .gallery_element:nth-child(7) {
-  background-image: url("/images/gallery_7.jpeg");
+  background-image: url("images/gallery_7.jpeg");
 }
 
 .gallery_element:nth-child(8) {
-  background-image: url("/images/gallery_8.jpeg");
+  background-image: url("images/gallery_8.jpeg");
 }
 
 .gallery_element:nth-child(9) {
-  background-image: url("/images/gallery_9.jpeg");
+  background-image: url("images/gallery_9.jpeg");
 }
 
 .gallery_element:nth-child(10) {
-  background-image: url("/images/gallery_10.jpeg");
+  background-image: url("images/gallery_10.jpeg");
 }
 
 .gallery_element:nth-child(11) {
-  background-image: url("/images/gallery_11.jpeg");
+  background-image: url("images/gallery_11.jpeg");
 }
 
 .gallery_element:nth-child(12) {
-  background-image: url("/images/gallery_12.jpeg");
+  background-image: url("images/gallery_12.jpeg");
 }
 
 .gallery_prev_button,
