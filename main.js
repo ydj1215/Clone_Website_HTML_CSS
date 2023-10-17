@@ -116,7 +116,7 @@ gallery_next_button.addEventListener("click", () => {
 
 // 창 크기 변경 시, gallery_list의 너비를 다시 계산
 window.addEventListener("resize", () => {
-  galleryElementWidth = gallery_list.offsetWidth / numberOfItems;
+  galleryElementWidth = (gallery_list.offsetWidth + 10) / numberOfItems;
 });
 
 // Shop
